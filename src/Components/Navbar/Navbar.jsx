@@ -40,7 +40,7 @@ const Navbar = () => {
         >
           <Link style={{ textDecoration: "none" }} to="/women">
             Women
-          </Link>{" "}
+          </Link>
           {menu === "Women" ? <hr /> : <></>}
         </li>
         <li
@@ -50,13 +50,17 @@ const Navbar = () => {
         >
           <Link style={{ textDecoration: "none" }} to="/kids">
             Kids
-          </Link>{" "}
+          </Link>
           {menu === "Kids" ? <hr /> : <></>}
         </li>
       </ul>
       <div className="nav-login-cart">
-        <button>Login</button>
-        <img src={cart_icon} alt="" />
+        <Link to="/Login">
+          <button>Login</button>
+        </Link>
+        <Link to="/cart">
+          <img src={cart_icon} alt="" />
+        </Link>
         <div className="nav-cart-count">0</div>
       </div>
     </div>
